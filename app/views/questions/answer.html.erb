@@ -1,0 +1,21 @@
+<div class="container">
+	<h1>Stupid Coaching</h1>
+
+	<div class="answer-box">
+		<p><%= @question.capitalize %></p>
+		<p><em>-You</em></p>
+	</div>
+
+	<div class="answer-box coach-answer">
+		<% if @question == "I am going to work" %>
+		<p class="coach">Great!</p>
+		<% elsif @question.include?"?" %>
+		<p class="coach">Silly question, get dressed and go to work!</p>
+		<% else %>
+		<p class="coach">I don't care, get dressed and go to work!</p>
+		<% end %>
+		<p><em>-Your coach</em></p>
+	</div>
+
+	<%= link_to "Ask a new question", ask_path, class: "btn" %>
+</div>
